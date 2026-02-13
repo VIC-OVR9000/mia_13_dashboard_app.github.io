@@ -24,7 +24,7 @@ LATINUM_STASIS = 2939.44
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('dash2.html')
 
 @app.route('/api/data')
 def get_data():
@@ -67,4 +67,5 @@ def get_data():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000, use_reloader=False)
+
 
