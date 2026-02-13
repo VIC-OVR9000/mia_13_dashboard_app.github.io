@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MIA-13 | BURRY-GRADE MONITOR</title>
+    <style>
+        body { background: #05070a; color: #00f2ff; font-family: 'monospace'; padding: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .card { border: 1px solid #1a1e26; padding: 20px; background: #0d1117; }
+        .big-num { font-size: 40px; font-weight: bold; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { border-bottom: 1px solid #00f2ff; text-align: left; padding: 10px; font-size: 12px; }
+        td { padding: 10px; border-bottom: 1px solid #1a1e26; color: #e1e4e8; }
+        .blink { animation: blinker 1s linear infinite; color: #ff4444; }
+        @keyframes blinker { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <h1>MIA-13 SYSTEMATIC MONITOR <span id="status" class="blink">[SYNCING]</span></h1>
+    
+    <div class="grid">
+        <div class="card">
+            <div>FLEET WEIGHTED INDEX</div>
+            <div id="index" class="big-num">0.00</div>
+            <div id="alpha" style="color: #00ff88;">CALCULATING ALPHA...</div>
+        </div>
+        <div class="card">
+            <div>FEEDBACK IV (SHIELD)</div>
+            <div id="iv" class="big-num">$0.00</div>
+            <div>STATUS: <span style="color: #00ff88;">REACTIVE</span></div>
+        </div>
+        <div class="card">
+            <div>LATINUM STASIS</div>
+            <div class="big-num">$2,939.44</div>
+            <div style="color: #888;">RESERVE RATIO: 11.7%</div>
+        </div>
+    </div>
+
+    <table id="ship-table">
+        <thead>
+            <tr><th>CORE</th><th>TICKER</th><th>PRICE</th><th>NOTIONAL</th><th>FEEDBACK IV</th></tr>
+        </thead>
+        <tbody id="fleet-body"></tbody>
+    </table>
+
+    <script>
+        async function update() {
+            const res = await fetch('/api/data');
+            const data = await res.json();
+            
+            document.getElementById('index').innerText = data.fleet_index;
+            document.getElementById('iv').innerText = "$" + data.feedback_iv.toLocaleString();
+            document.getElementById('status').innerText = "[LINK ACTIVE]";
+            document.getElementById('status').classList.remove('blink');
+            document.getElementById('status').style.color = "#00ff88";
+
+            let html = "";
+            data.ships.forEach(s => {
+                html += `<tr><td>${s.core}</td><td>${s.ticker}</td><td>$${s.price}</td><td>$${s.val}</td><td>$${s.iv}</td></tr>`;
+            });
+            document.getElementById('fleet-body').innerHTML = html;
+        }
+        setInterval(update, 10000);
+        update();
+    </script>
+</body>
+</html>

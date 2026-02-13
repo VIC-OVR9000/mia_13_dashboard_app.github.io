@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MIA-13 | BURRY-GRADE MONITOR</title>
+    <style>
+        body { background: #05070a; color: #00f2ff; font-family: 'monospace'; padding: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .card { border: 1px solid #1a1e26; padding: 20px; background: #0d1117; }
+        .big-num { font-size: 40px; font-weight: bold; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { border-bottom: 1px solid #00f2ff; text-align: left; padding: 10px; font-size: 12px; }
+        td { padding: 10px; border-bottom: 1px solid #1a1e26; color: #e1e4e8; }
+        .blink { animation: blinker 1s linear infinite; color: #ff4444; }
+        @keyframes blinker { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIA-13 | Institutional Strategy Monitor</title>
+    <style>
+        :root { --bg: #05070a; --panel: #11141b; --accent: #00f2ff; --text: #e1e4e8; --warn: #ffcc00; --danger: #ff4444; }
+        body { background: var(--bg); color: var(--text); font-family: 'JetBrains Mono', monospace, 'Courier New'; margin: 0; padding: 20px; font-size: 13px; }
+        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .header { grid-column: span 4; border-bottom: 2px solid var(--accent); padding-bottom: 10px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .panel { background: var(--panel); border: 1px solid #2d333b; padding: 15px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .stat-large { font-size: 24px; color: var(--accent); font-weight: bold; }
+        .label { font-size: 10px; text-transform: uppercase; color: #8b949e; letter-spacing: 1px; margin-bottom: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th { text-align: left; color: var(--accent); font-size: 11px; border-bottom: 1px solid #2d333b; padding: 8px 4px; }
+        td { padding: 8px 4px; border-bottom: 1px solid #1a1e26; }
+        .positive { color: #00ff88; } .negative { color: var(--danger); }
+        .stasis-box { border-left: 4px solid var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div>
+        <h1 style="margin:0; font-size: 28px;">MIA-13 <span style="color: #666; font-size: 14px;">[MODULAR INTELLIGENCE ARCHITECTURE]</span></h1>
+        <div style="margin-top:5px;">STATUS: <span style="color:#00ff88;">ACTIVE RECONNAISSANCE</span> | REGIME: HIGH DISPERSION</div>
+    </div>
+    <div style="text-align: right;">
+        <div>OPERATIONAL DATE: FEB 13, 2026</div>
+        <div>LATINUM STASIS: $2,939.44 [RESERVE READY]</div>
+    </div>
+</div>
+
+<div class="grid" style="margin-top: 20px;">
+    <!-- CORE KPI TILES -->
+    <div class="panel">
+        <div class="label">Fleet Weighted Index</div>
+        <div class="stat-large">131.27 <span style="font-size: 12px; color: #00ff88;">+3.12% Alpha</span></div>
+        <div style="font-size: 10px; margin-top: 5px;">Benchmark: SPX 5,912.44</div>
+    </div>
+    <div class="panel">
+        <div class="label">Hedge Mitigation Efficiency</div>
+        <div class="stat-large">55.00%</div>
+        <div style="font-size: 10px; margin-top: 5px;">Silicon Snap Protection: ACTIVE</div>
+    </div>
+    <div class="panel">
+        <div class="label">Options Feedback IV</div>
+        <div class="stat-large">$4,112.94</div>
+        <div style="font-size: 10px; margin-top: 5px;">Total Intrinsic Alpha Value</div>
+    </div>
+    <div class="panel stasis-box">
+        <div class="label">Sharpe Ratio (Rolling 30D)</div>
+        <div class="stat-large">2.44</div>
+        <div style="font-size: 10px; margin-top: 5px;">WFE: 0.68 [STABLE]</div>
+    </div>
+
+    <!-- MAIN HOLDINGS TABLE -->
+    <div class="panel" style="grid-column: span 3;">
+        <div class="label">Operational Fleet Ledger</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>SHIP / TICKER</th>
+                    <th>CORE</th>
+                    <th>STRATEGY</th>
+                    <th>DELTA</th>
+                    <th>SHARES</th>
+                    <th>INIT. INVEST.</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Warp Thrust / GOOGL</td><td>V</td><td>Synth Long</td><td>0.85</td><td>9</td><td>$2,781.36</td><td class="positive">THRUSTING</td></tr>
+                <tr><td>Deep Search / MSFT</td><td>V</td><td>LEAPS</td><td>0.82</td><td>6</td><td>$2,409.00</td><td class="positive">ACTIVE</td></tr>
+                <tr><td>Mirror Core / META</td><td>Beta</td><td>LEAPS</td><td>0.78</td><td>3</td><td>$1,947.00</td><td class="positive">SYNCED</td></tr>
+                <tr><td>Gravity Anchor / PG</td><td>Omega</td><td>Prot. Put</td><td>-0.35</td><td>11</td><td>$1,885.40</td><td style="color:#888;">BALLAST</td></tr>
+                <tr><td>Entropy Hull / GLD</td><td>Phys</td><td>Prot. Put</td><td>-0.15</td><td>4</td><td>$1,016.48</td><td style="color:#888;">SHIELDED</td></tr>
+                <tr><td>Volatility / VIXY</td><td>Entropy</td><td>LEAPS</td><td>0.55</td><td>84</td><td>$1,247.40</td><td class="negative">STANDBY</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- RISK ANALYSIS -->
+    <div class="panel">
+        <div class="label">Core Synergy (Correlation)</div>
+        <div style="margin-top:10px;">
+            <div style="display:flex; justify-content:space-between;"><span>V vs OMEGA</span> <span class="positive">-0.03</span></div>
+            <div style="height:4px; background:#222; margin: 5px 0;"><div style="width:5%; height:100%; background:var(--accent);"></div></div>
+            
+            <div style="display:flex; justify-content:space-between; margin-top:10px;"><span>V vs ENTROPY</span> <span class="positive">-0.54</span></div>
+            <div style="height:4px; background:#222; margin: 5px 0;"><div style="width:54%; height:100%; background:var(--accent);"></div></div>
+            
+            <div style="display:flex; justify-content:space-between; margin-top:10px;"><span>V vs BETA</span> <span style="color:#ffcc00;">0.48</span></div>
+            <div style="height:4px; background:#222; margin: 5px 0;"><div style="width:48%; height:100%; background:#ffcc00;"></div></div>
+        </div>
+        <div class="label" style="margin-top:25px;">Silicon Snap Vulnerability</div>
+        <div style="font-size: 18px; color: var(--warn);">LOW [13.5% Est. Loss]</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1>MIA-13 SYSTEMATIC MONITOR <span id="status" class="blink">[SYNCING]</span></h1>
+    
+    <div class="grid">
+        <div class="card">
+            <div>FLEET WEIGHTED INDEX</div>
+            <div id="index" class="big-num">0.00</div>
+            <div id="alpha" style="color: #00ff88;">CALCULATING ALPHA...</div>
+        </div>
+        <div class="card">
+            <div>FEEDBACK IV (SHIELD)</div>
+            <div id="iv" class="big-num">$0.00</div>
+            <div>STATUS: <span style="color: #00ff88;">REACTIVE</span></div>
+        </div>
+        <div class="card">
+            <div>LATINUM STASIS</div>
+            <div class="big-num">$2,939.44</div>
+            <div style="color: #888;">RESERVE RATIO: 11.7%</div>
+        </div>
+    </div>
+
+    <table id="ship-table">
+        <thead>
+            <tr><th>CORE</th><th>TICKER</th><th>PRICE</th><th>NOTIONAL</th><th>FEEDBACK IV</th></tr>
+        </thead>
+        <tbody id="fleet-body"></tbody>
+    </table>
+
+    <script>
+        async function update() {
+            const res = await fetch('/api/data');
+            const data = await res.json();
+            
+            document.getElementById('index').innerText = data.fleet_index;
+            document.getElementById('iv').innerText = "$" + data.feedback_iv.toLocaleString();
+            document.getElementById('status').innerText = "[LINK ACTIVE]";
+            document.getElementById('status').classList.remove('blink');
+            document.getElementById('status').style.color = "#00ff88";
+
+            let html = "";
+            data.ships.forEach(s => {
+                html += `<tr><td>${s.core}</td><td>${s.ticker}</td><td>$${s.price}</td><td>$${s.val}</td><td>$${s.iv}</td></tr>`;
+            });
+            document.getElementById('fleet-body').innerHTML = html;
+        }
+        setInterval(update, 10000);
+        update();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

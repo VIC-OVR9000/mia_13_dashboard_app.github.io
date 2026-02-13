@@ -1,0 +1,14 @@
+Ship_Designation,Ticker,Core,Strategy,Strike,Expiration,Weight,Shares_Held,Role,Total_Initial_Investment
+MIA Warp Thrust,GOOGL,V,Synthetic Long,185.00,Jan-2027,0.12,9,Primary Thrust,2781.36
+Deep Search,MSFT,V,LEAPS (Call),445.00,Jan-2026,0.10,6,Strategic Sensor,2409.00
+Cloud Fabric,ORCL,V,Synthetic Long,150.00,Feb-2026,0.08,12,Infrastructure Anchor,1878.00
+Mirror Core,META,Beta,LEAPS (Call),665.00,Feb-2026,0.10,3,Mirror Sync,1947.00
+Mirror Cloud,AMZN,Beta,Synthetic Long,222.50,Feb-2026,0.10,12,Mirror Gravity,2453.04
+Mirror Ad-Tech,TTD,Beta,LEAPS (Call),45.00,Feb-2026,0.05,10,Mirror Tactical,1141.50
+Gravity Anchor,PG,Omega,Protective Put,162.50,Feb-2026,0.08,11,Inverse Hedge,1885.40
+Supply Ballast,KO,Omega,Protective Put,72.00,Feb-2026,0.07,26,Inverse Hedge,1738.10
+Retail Stabilizer,WMT,Omega,Protective Put,130.00,Feb-2026,0.10,18,Inverse Hedge,2405.52
+Absolute Hull,GLD,Entropy,Protective Put,250.00,Feb-2026,0.05,4,Entropy Shield,1016.48
+Rate Shield,TLT,Entropy,Protective Put,95.00,Feb-2026,0.05,12,Entropy Shield,1157.76
+Volatility Spike,VIXY,Entropy,LEAPS (Call),15.00,Jan-2027,0.05,84,Entropy Volatility,1247.40
+Latinum Stasis,SPAXX,Reserve,Cash Reserve,N/A,N/A,0.117,2939.44,Liquidity Stasis,2939.44
